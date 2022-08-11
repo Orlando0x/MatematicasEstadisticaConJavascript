@@ -8,7 +8,16 @@ btn.addEventListener("click", cuentaTotal)
 
 
 function cuentaTotal(){
+
     const total = (monto.value) - (monto.value * (descuento.value / 100));
     console.log(total);
-    texto.innerText = `El monto total a pagar es de: $${total}`;
+    if(total === 0){
+        texto.innerText = 'Recuerda, debes colocar algun monto y luego el descuento'
+    } else if(total < 0) {
+        texto.innerText = 'ERROR: Has introducido un descuento superior al 100%'
+    } else {
+
+        texto.innerText = `El monto total a pagar es de: $${total}`;
+    }
 }
+ 

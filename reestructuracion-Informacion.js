@@ -1,7 +1,7 @@
 /* const array = [1,2,3,5,7,2,"abc",2,"cde",1,"abc",5,6,"abc",9,"abc"]; */
 
 console.log(salarios);
-let empresas = {};
+const empresas = {};
 
 const company = () => {
     for(element of salarios){
@@ -57,27 +57,18 @@ const company = () => {
  */
 
 
-/*     for(let i=0; i < array.length; i++){
-        const elemento = array[i].trabajos[0].empresa;
-
-        if(empresas[elemento]){
-            empresas[elemento] += 1;
-        } else {
-            empresas[elemento] = 1;
-        }
-        
-    } */
-/*     let arrayList= Object.entries(empresas);
-    let listaOrdenada = arrayList.sort((a , b) => {
-        if(a[1] > b[1]) return -1;
-        if(a[1] < b[1]) return 1;
-        return 0;
-        });
-    console.log[listaOrdenada];
-    return listaOrdenada[0][0]; */
-
 }
 
 company(salarios);
 console.log(empresas);
+ 
+// Sacar la mediana por empresa y año seleccionados en la funcion
 
+function medianaEmpresa (empresa, year){
+    array = empresas[empresa][year];
+    let mediana = MathCalculos.calcularMediana(array);
+    console.log(mediana);
+    return mediana;
+
+}
+medianaEmpresa("MarketerosCOL",2022);

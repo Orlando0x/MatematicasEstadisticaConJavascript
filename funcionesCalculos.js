@@ -21,12 +21,12 @@ MathCalculos.calcularPromedio = function calcularPromedio(){
         return promedio.toFixed(2);
 }
 
-MathCalculos.calcularMediana = function calcularMediana (array){
+MathCalculos.calcularMediana = function calcularMediana (array) {
     array.sort((a , b) => {
-    if(a > b) return 1;
-    if(a < b) return -1;
-    return 0;
-    });
+        if(a > b) return 1;
+        if(a < b) return -1;
+        return 0;
+        });
 // se puede simplificar array.sort((a,b) => a - b);
     let mitad = array.length / 2;
     if (MathCalculos.esPar(array)){
